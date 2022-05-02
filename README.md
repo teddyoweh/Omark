@@ -1,6 +1,6 @@
 # Omark
 
-Omark is the new form of taking attendance in class, its captures a classroom and determines which student is in class and which student isn;t
+Omark is the new form of taking attendance in class, its captures a classroom and determines which student is in class and which student isn't
 
 # Overview
 The Omark Program was written with fast use in mind. It provides the following key features
