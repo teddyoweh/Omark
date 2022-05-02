@@ -71,7 +71,7 @@ print(om.absent)
 ```
 
  ## View all present students
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the names saved as the same name stored in the text file.
 
 ```Python
  
