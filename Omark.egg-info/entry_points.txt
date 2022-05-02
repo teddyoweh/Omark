@@ -1,0 +1,2 @@
+[console_scripts]
+Omark = reader.__main__:main
