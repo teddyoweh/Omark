@@ -31,24 +31,55 @@ from Omark import Omark
 ```
 
  
-## Initialize screenshotLogger 
-First, let's create a new screenshotLogger object. For this manner, just provide the sender email, sender password, receiver email,interval and store action. 
+## Initialize Omark
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
 
 ```Python
  
-sl = screenshotLogger(sender_email='example@gmail.com',
-                      sender_password='testpassword',
-                      send_to='receiver@gmail.com',
-                      interval=3,
-                      store='file')
-slv = sl.validate()
-sl.execute(slv)
+om = Omark(students='file.txt',data='folder')
 
+```
+## View all details
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+
+```Python
+ 
+om = Omark(students='file.txt',data='folder')
+print(om.register())
+
+
+```
+## View all students
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+
+```Python
+ 
+om = Omark(students='file.txt',data='folder')
+print(om.students)
+
+
+```
+## View all absent students
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+
+```Python
+ 
+om = Omark(students='file.txt',data='folder')
+print(om.absent)
 
 
 ```
 
+ ## View all present students
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+
+```Python
  
+om = Omark(students='file.txt',data='folder')
+print(om.present)
+
+
+```
 
 
 
