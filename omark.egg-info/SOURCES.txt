@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+Omark/Omark.py
+Omark/__init__.py
+omark.egg-info/PKG-INFO
+omark.egg-info/SOURCES.txt
+omark.egg-info/dependency_links.txt
+omark.egg-info/entry_points.txt
+omark.egg-info/requires.txt
+omark.egg-info/top_level.txt

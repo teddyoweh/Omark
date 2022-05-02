@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: Omark
-Version: 1.0.0
+Name: omark
+Version: 2.0.0
 Summary: Read the latest Real Python tutorials
 Home-page: https://github.com/teddyoweh/Omark
 Author: Teddy Oweh
@@ -14,7 +14,7 @@ Description-Content-Type: text/markdown
 
 # Omark
 
-Omark is the new form of taking attendance in class, its captures a classroom and determines which student is in class and which student isn;t
+Omark is the new form of taking attendance in class, its captures a classroom and determines which student is in class and which student isn't
 
 # Overview
 The Omark Program was written with fast use in mind. It provides the following key features
