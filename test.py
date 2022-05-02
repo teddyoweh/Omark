@@ -1,8 +1,7 @@
-import os
-datainfo = []
-print(datainfo)
-for a in os.listdir('data'):
-    datainfo.append(a)
-    
-datainfo.sort()
-print(datainfo)
+box =[]
+for i in open('ted.txt', 'r').readlines():
+    for a in range(100):
+        i = i.strip(' '*a)
+        i = i.strip('\n'*a)
+    box.append(i)
+print(box)

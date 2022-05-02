@@ -5,7 +5,20 @@ import cv2 as cv
 import cv2
 import face_recognition
 class Attendance:
-    def __init__(self):
+    def __init__(self,students):
+    
+        try:
+            box =[]
+            for iaa in open(students, 'r').readlines():
+                for a in range(100):
+                    iaa = iaa.strip(' '*a)
+                    iaa = iaa.strip('\n'*a)
+                box.append(iaa)
+            self.total_students = students
+            self.students= students
+        except FileNotFoundError as e:
+            print(e)
+        
         try:
             os.mkdir('attendance_data')
         except:
@@ -13,14 +26,14 @@ class Attendance:
         today = date.today()
         today = today.strftime("%b-%d-%Y")
         cam_port = 0
-        cam = cv.VideoCapture(cam_port)
+        cam = cv2.VideoCapture(cam_port, cv2.CAP_DSHOW)
         result, image = cam.read()
         if result:
  
             cv.imshow(today, image)
  
             cv.imwrite("attendance_data/{}.png".format(today), image)
-            img = image#cv2.imread("attendance_data/{}.png".format(today))
+            img = image 
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
             faces = face_cascade.detectMultiScale(gray, 1.1, 4)
@@ -33,14 +46,14 @@ class Attendance:
             
                 cv2.imwrite(f'img/face{x}.jpg', faces)
                 cv.waitKey(1)
-            cv.destroyWindow("GeeksForGeeks")
+           
 
         else:
             print("No image detected. Please! try again")
         box ={}
         tt =[]
         datainfo = []
-        students= ['biden','teddy','wren']
+        students= self.students
         for a in os.listdir('data'):
             datainfo.append(a)
             
@@ -55,6 +68,17 @@ class Attendance:
                 if face_recognition.compare_faces([today_encoding], data_encoding)[0]==True:
                     tt.append(stu)
         print(tt)
-    def compare_faces(face1,face2):
+        self.present = tt
+        for iki in tt:
+            students.remove(iki)
+        self.absent= students
+        cv2.destroyAllWindows()
+        
+    def register(self):
+        for k,l in zip(self.present,self.absent):
+            print('{} Number of students in class'.format((len(self.total_students))))
+            print('{} students presents and {} students absent'.format(len(self.present)),len(self.present))
+            print('{} | Present'.format(self.present))
+            print('{} | Absent'.format(self.absent))
         pass
 Attendance()
