@@ -17,9 +17,9 @@ In the following paragraphs, I am going to describe how you can get and use Omar
 
 ###  Getting it
 
-To download Omark , either fork this github repo or simply use Pypi via pip.
+To download Omark , either fork this github repo or simply use Pypi via pip, install Omarke.
 ```sh
-$ pip install Omark
+$ pip install Omarke
 ```
 
 ### Using it
@@ -32,7 +32,7 @@ from Omark import Omark
 
  
 ## Initialize Omark
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the names saved as the same name stored in the text file.
 
 ```Python
  
@@ -40,7 +40,7 @@ om = Omark(students='file.txt',data='folder')
 
 ```
 ## View all details
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+ 
 
 ```Python
  
@@ -50,7 +50,7 @@ print(om.register())
 
 ```
 ## View all students
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+ 
 
 ```Python
  
@@ -60,7 +60,7 @@ print(om.students)
 
 ```
 ## View all absent students
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the
+ 
 
 ```Python
  
@@ -71,7 +71,7 @@ print(om.absent)
 ```
 
  ## View all present students
-First, let's create a new Omark object. For this , just provide the students in a text file and a folder of all the students image with the names saved as the same name stored in the text file.
+ 
 
 ```Python
  

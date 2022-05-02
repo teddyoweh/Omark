@@ -12,8 +12,8 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
  
 setup(
-    name="omark",
-    version="2.0.0",
+    name="Omarke",
+    version="1.0",
     description="Read the latest Real Python tutorials",
     long_description=README,
     long_description_content_type="text/markdown",
