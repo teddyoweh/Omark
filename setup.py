@@ -1,10 +1,10 @@
 
-i# -*- coding=utf-8 -*-
+# -*- coding=utf-8 -*-
 # Name: teddy oweh
 # Email: teddy@teddyoweh.com
 # Message: Feel Free To Contact Me on Enquires or Question, il Reply :)mport pathlib
 from setuptools import setup
-
+import pathlib
  
 HERE = pathlib.Path(__file__).parent
 
