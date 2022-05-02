@@ -10,15 +10,13 @@ import cv2
 import shutil
 import face_recognition
 class Omark:
-    def __init__(self,students):
+    def __init__(self,students,data):
         try:
             os.mkdir('attendance_data')
         except:
             pass 
-        try:
-            os.mkdir('data')
-        except:
-            pass 
+        
+           
         try:
             box =[]
             for iaa in open(students, 'r').readlines():
@@ -66,7 +64,7 @@ class Omark:
         tt =[]
         datainfo = []
         students= self.students
-        for a in os.listdir('data'):
+        for a in os.listdir(data):
             datainfo.append(a)
             
         datainfo.sort()
@@ -74,7 +72,7 @@ class Omark:
         for todayimg in os.listdir('img'):
             for dataimg,stu in zip(datainfo,students):
                 today_image = face_recognition.load_image_file('img/{}'.format(todayimg))
-                data_image = face_recognition.load_image_file('data/{}'.format(dataimg))
+                data_image = face_recognition.load_image_file('{}/{}'.format(data,dataimg))
                 today_encoding = face_recognition.face_encodings(today_image)[0]
                 data_encoding = face_recognition.face_encodings(data_image)[0]
                 if face_recognition.compare_faces([today_encoding], data_encoding)[0]==True:
