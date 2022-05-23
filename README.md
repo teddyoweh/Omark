@@ -80,18 +80,7 @@ print(om.present)
 
 
 ```
- ## 
  
-
-```Python
- 
-from Omark import Omark 
-om = Omark(students='file.txt',data='folder')
-print(om.register())
-print(om.absent)
-print(om.present)
-
-```
 
 
 License
