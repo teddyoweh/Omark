@@ -1,5 +1,5 @@
 # Omark
-Omark implements a linear search algorithm on a facial recognition model which efficiently finds faces which absent in picture based on a dataset
+Omarke is a facial search algorithm that implements a binary search algorithm on a facial recognition model which efficiently identifies faces that are absent in pictures based on a dataset.
 .
 A pratical use case is taking attendance in class, its captures a classroom and determines which student is in class and which student isn't
 
